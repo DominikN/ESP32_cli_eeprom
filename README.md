@@ -1,4 +1,4 @@
-# ESP32-http-websocket
+# ESP32-CLI-eeprom
 
 **_Communicate with ESP32 over the internet using command line interface to save network credentials in the non-volatile memory and control LED. Written using Arduino framework._**
 
