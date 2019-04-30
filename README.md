@@ -5,8 +5,11 @@
 Command line interface is in many cases the most universal and comfortable way to control things. With CLI you can control your things over the terminal application and in easy way integrate it with your desktop/mobile application.
 
 In this simple project I will demonstrate:
+
 a) How to use CLI to write network credentials to non-volatile memory. You will be able to change Wi-Fi network credentials without reprogramming your board.
+
 b) How to connect over the internet to your ESP32 through a Linux terminal
+
 c) How to control LED over the Internet through CLI
 
 
@@ -76,7 +79,7 @@ where in `XXXXXXXXXXXXXXXXXXXXXX` is husarnet join code from point 5.
 - open Linux terminal and type this line to install Husarnet: `$ curl https://install.husarnet.com/install.sh | sudo bash`
 - connect your Linux computer to Husarnet network by executing this command: `$ husarnet join XXXXXXXXXXXXXXXXXXXXXX mycomputer"`, where in `XXXXXXXXXXXXXXXXXXXXXX` is husarnet join code from point 5.
 
-**11. Control your ESP32 through CLI over the Internet:
+**11. Control your ESP32 through CLI over the Internet:**
 
 - open Linux terminal  and type this line to connect to ESP32: `$ socat - tcp:myesp32:8001`
 - type `setled 1` to turn on LED connected to pin 16.
