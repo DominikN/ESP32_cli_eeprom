@@ -6,11 +6,9 @@ Command line interface is in many cases the most universal and comfortable way t
 
 In this simple project I will demonstrate:
 
-a) How to use CLI to write network credentials to non-volatile memory. You will be able to change Wi-Fi network credentials without reprogramming your board.
-
-b) How to connect over the internet to your ESP32 through a Linux terminal
-
-c) How to control LED over the Internet through CLI
+- How to **use CLI to write network credentials to non-volatile memory**. You will be able to change Wi-Fi network credentials without reprogramming your board.
+- How to **connect over the internet to your ESP32** through a Linux terminal
+- How to **control LED over the Internet through CLI**
 
 
 In the project we use a few interesing tools:
