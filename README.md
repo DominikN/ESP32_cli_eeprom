@@ -75,7 +75,7 @@ where in `XXXXXXXXXXXXXXXXXXXXXX` is husarnet join code from point 5.
 **10. Install Husarnet on your Linux computer and add it to the same network as ESP32**
 
 - open Linux terminal and type this line to install Husarnet: `$ curl https://install.husarnet.com/install.sh | sudo bash`
-- connect your Linux computer to Husarnet network by executing this command: `$ husarnet join XXXXXXXXXXXXXXXXXXXXXX mycomputer"`, where in `XXXXXXXXXXXXXXXXXXXXXX` is husarnet join code from point 5.
+- connect your Linux computer to Husarnet network by executing this command: `$ sudo husarnet join XXXXXXXXXXXXXXXXXXXXXX mycomputer"`, where in `XXXXXXXXXXXXXXXXXXXXXX` is husarnet join code from point 5.
 
 **11. Control your ESP32 through CLI over the Internet:**
 
