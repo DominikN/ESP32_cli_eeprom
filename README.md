@@ -24,7 +24,7 @@ To run the project, open Arduino IDE and follow these steps:
 **1. Install Husarnet package for ESP32:**
 
 - open `File -> Preferences`
-- in a field **Additional Board Manager URLs** add this link: `https://files.husarion.com/arduino/package_esp32_index.json`
+- in a field **Additional Board Manager URLs** add this link: `https://github.com/husarnet/arduino-esp32/releases/download/1.0.4-1/package_esp32_index.json`
 - open `Tools -> Board: ... -> Boards Manager ...`
 - Search for `esp32-husarnet by Husarion`
 - Click Install button
