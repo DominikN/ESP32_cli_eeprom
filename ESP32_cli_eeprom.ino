@@ -93,6 +93,7 @@ void setup() {
     Serial.print("hostname:");
     Serial.println(hostname);
 
+    Husarnet.selfHostedSetup("default");
     Husarnet.join(joincode.c_str(), hostname.c_str());
     Husarnet.start();
 
