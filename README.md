@@ -19,7 +19,7 @@ to easily create a command line interface. You don't need to play with parsing s
 - **[Husarnet](https://github.com/husarnet/husarnet)** - Open source, peer-to-peer Virtual LAN (VPN) network thanks to which you can access ESP32 both from LAN network and through the internet, without static IP adressess, setting port forwarding on your router etc.
 
 
-To run the project, open Arduino IDE and follow these steps:
+To run the project follow these steps:
 
 **1. Flashing ESP32**
 
