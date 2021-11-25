@@ -16,7 +16,7 @@ In the project we use a few interesing tools:
 - **[SimpleCLI library](https://github.com/spacehuhn/SimpleCLI)** - 
 to easily create a command line interface. You don't need to play with parsing strings. That library do that (and much more) for you in a few lines.
 - **[Preferences library](https://github.com/espressif/arduino-esp32/blob/master/libraries/Preferences/src/Preferences.h)** - the most elegant way that I have found to interface to non-volatile/EEPROM/Flash memory during run-time from user code. We use that library to store network credentials in the memory and read them after power-on to connent to the network.
-- **[Husarnet](https://github.com/husarnet/arduino-esp32)** - a Virtual LAN network thanks to which you can access ESP32 both from LAN network and through the internet, without static IP adressess, setting port forwarding on your router etc.
+- **[Husarnet](https://github.com/husarnet/husarnet)** - Open source, peer-to-peer Virtual LAN (VPN) network thanks to which you can access ESP32 both from LAN network and through the internet, without static IP adressess, setting port forwarding on your router etc.
 
 
 To run the project, open Arduino IDE and follow these steps:
