@@ -12,15 +12,15 @@ Preferences preferences;
 
 SimpleCLI cli;
 
-Command conwifi;
-Command husarnet_join;
-Command setled;
+Command con_wifi;
+Command hnet_join;
+Command set_led;
 
 void taskInternetCLI( void * parameter );
 
-void conwifiCallback(cmd* c);
-void husarnet_joinCallback(cmd* c);
-void setledCallback(cmd* c);
+void con_wifi_callback(cmd* c);
+void hnet_join_callback(cmd* c);
+void set_led_callback(cmd* c);
 
 void setup() {
   Serial.begin(115200);
@@ -40,16 +40,16 @@ void setup() {
 
   // Configure a command line interface (CLI)
 
-  conwifi = cli.addCmd("conwifi", conwifiCallback);
-  conwifi.addArg("ssid");
-  conwifi.addArg("pass");
+  con_wifi = cli.addCmd("con_wifi", con_wifi_callback);
+  con_wifi.addArg("ssid");
+  con_wifi.addArg("pass");
 
-  husarnet_join = cli.addCmd("husarnet_join", husarnet_joinCallback);
-  husarnet_join.addPosArg("joincode");
-  husarnet_join.addPosArg("hostname");
+  hnet_join = cli.addCmd("hnet_join", hnet_join_callback);
+  hnet_join.addPosArg("joincode");
+  hnet_join.addPosArg("hostname");
 
-  setled = cli.addCmd("setled", setledCallback);
-  setled.addPosArg("state");
+  set_led = cli.addCmd("set_led", set_led_callback);
+  set_led.addPosArg("state");
 
 
   // Connect to Wi-Fi
@@ -149,7 +149,7 @@ void loop() {
 }
 
 
-void conwifiCallback(cmd* c) {
+void con_wifi_callback(cmd* c) {
   Command cmd(c);
 
   String ssid = cmd.getArg("ssid").getValue();
@@ -163,7 +163,7 @@ void conwifiCallback(cmd* c) {
   Serial.println("\r\nWi-Fi credentials saved. Reset to connect.");
 }
 
-void husarnet_joinCallback(cmd* c) {
+void hnet_join_callback(cmd* c) {
   Command cmd(c);
 
   String hostname = cmd.getArg("hostname").getValue();
@@ -177,7 +177,7 @@ void husarnet_joinCallback(cmd* c) {
   Serial.println("\r\nHusarnet credentials saved. Reset to connect.");
 }
 
-void setledCallback(cmd* c) {
+void set_led_callback(cmd* c) {
   Command cmd(c);
 
   String state = cmd.getArg("state").getValue();

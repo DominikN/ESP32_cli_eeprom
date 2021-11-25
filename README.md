@@ -21,65 +21,55 @@ to easily create a command line interface. You don't need to play with parsing s
 
 To run the project, open Arduino IDE and follow these steps:
 
-**1. Install Husarnet package for ESP32:**
+**1. Flashing ESP32**
 
-- open `File -> Preferences`
-- in a field **Additional Board Manager URLs** add this link: `https://github.com/husarnet/arduino-esp32/releases/download/1.0.4-1/package_esp32_index.json`
-- open `Tools -> Board: ... -> Boards Manager ...`
-- Search for `esp32-husarnet by Husarion`
-- Click Install button
+Clone the repo and open it using [Visual Studio Code](https://code.visualstudio.com/) with [PlatformIO extension](https://platformio.org/install/ide?install=vscode) installed.
 
-**2. Select ESP32 dev board:**
+Connect ESP32 with your laptop using USB cable, and execute:
 
-- open `Tools -> Board`
-- select **_ESP32 Dev Module_** under "ESP32 Arduino (Husarnet)" section
+```bash
+# Build project
+$ pio run
 
-**3. Install SimpleCLI library:**
+# Upload firmware
+$ pio run --target upload
+```
 
-- open `Tools -> Manage Libraries...`
-- search for `SimpleCLI`
-- click install button
-
-**4. Program ESP32 board:**
-
-- Open **ESP32_cli_eeprom.ino** project
-- upload project to your ESP32 board.
-
-**5. Get Husarnet join code**
+**2. Get Husarnet join code**
 
 - Register at https://app.husarnet.com/
 - Click **Create network** button, name it (eg. `mynet`), and click **Create** button
 - Click **Add element** button and go to the `join code` tab
-- Copy your join code containging 22 characters `XXXXXXXXXXXXXXXXXXXXXX` and save it for later
+- Copy your join code (looking like `fc94:b01d:1803:8dd8:b293:5c7d:7639:932a/xxxxxxxxxxxxxxxxxxxxxxxxx`) and save it for later
 
-**6. Open serial monitor in Arduino IDE:**
+**3. Open serial monitor in Arduino IDE:**
 
-- open `Tools -> Serial Monitor`
-- change baudrate to "115200 baud"
-- change line ending to "Both NL & CR"
+Click the **"PlatformIO: Serial Monitor"** button and access ESP32 CLI.
 
-**7. Save Wi-Fi network credentials in ESP32 non-volatile memory by typing in the Serial Monitor:**
+**4. Save Wi-Fi network credentials in ESP32 non-volatile memory by typing in the Serial Monitor:**
 
-`conwifi -ssid "<YOUR_WIFI_NAME>" -pass "<YOUR_WIFI_PASS>"`
+`con_wifi -ssid "<YOUR_WIFI_NAME>" -pass "<YOUR_WIFI_PASS>"`
 
 where in `<YOUR_WIFI_NAME>` and `<YOUR_WIFI_PASS>` place your Wi-Fi credentials.
 
-**8. Save Husarnet network credentials in ESP32 non-volatile memory by typing in the Serial Monitor:**
+**5. Save Husarnet network credentials in ESP32 non-volatile memory by typing in the Serial Monitor:**
 
-`husarnet_join XXXXXXXXXXXXXXXXXXXXXX myesp32"`
+`hnet_join XXXXXXXXXXXXXXXXXXXXXX myesp32"`
 
-where in `XXXXXXXXXXXXXXXXXXXXXX` is husarnet join code from point 5.
+where in `XXXXXXXXXXXXXXXXXXXXXX` is husarnet join code from point 2.
 
-**9. Reset ESP32, on the serial monitor you should see that is trying to connect to Wi-Fi and Husarnet network.
+**6. Reset ESP32, on the serial monitor you should see that is trying to connect to Wi-Fi and Husarnet network.**
 
-**10. Install Husarnet on your Linux computer and add it to the same network as ESP32**
+**7. Install Husarnet on your laptop and add it to the same network as ESP32**
 
 - open Linux terminal and type this line to install Husarnet: `$ curl https://install.husarnet.com/install.sh | sudo bash`
-- connect your Linux computer to Husarnet network by executing this command: `$ sudo husarnet join XXXXXXXXXXXXXXXXXXXXXX mycomputer"`, where in `XXXXXXXXXXXXXXXXXXXXXX` is husarnet join code from point 5.
+- connect your Linux computer to Husarnet network by executing this command: `$ sudo husarnet join XXXXXXXXXXXXXXXXXXXXXX mycomputer"`, where in `XXXXXXXXXXXXXXXXXXXXXX` is husarnet join code from point 2.
 
-**11. Control your ESP32 through CLI over the Internet:**
+> Other instalation methods and other platforms are described in: https://husarnet.com/docs/
+
+**8. Control your ESP32 through CLI over the Internet:**
 
 - open Linux terminal  and type this line to connect to ESP32: `$ socat - tcp:myesp32:8001`
-- type `setled 1` to turn on LED connected to pin 16.
+- type `set_led 1` to turn on LED connected to pin 16.
 
 Enjoy! :)
