@@ -1,9 +1,9 @@
 # ESP32_CLI_eeprom
 
-[![GitHub stars](https://img.shields.io/github/stars/dominikn/ESP32-CLI-eeprom?style=social)](https://github.com/DominikN/ESP32-CLI-eeprom/stargazers/)
+[![GitHub stars](https://img.shields.io/github/stars/dominikn/ESP32_CLI_eeprom?style=social)](https://github.com/DominikN/ESP32_CLI_eeprom/stargazers/)
 
-[![Build firmware](https://github.com/DominikN/ESP32-CLI-eeprom/actions/workflows/build.yml/badge.svg)](https://github.com/DominikN/ESP32-CLI-eeprom/actions/workflows/build.yml)
-[![GitHub license](https://img.shields.io/github/license/dominikn/ESP32-CLI-eeprom.svg)](https://github.com/dominikn/ESP32-CLI-eeprom/blob/master/LICENSE)
+[![Build firmware](https://github.com/DominikN/ESP32_CLI_eeprom/actions/workflows/build.yml/badge.svg)](https://github.com/DominikN/ESP32_CLI_eeprom/actions/workflows/build.yml)
+[![GitHub license](https://img.shields.io/github/license/dominikn/ESP32_CLI_eeprom.svg)](https://github.com/dominikn/ESP32_CLI_eeprom/blob/master/LICENSE)
 
 **_Communicate with ESP32 over the internet using command line interface to save network credentials in the non-volatile memory and control LED. Written using Arduino framework._**
 
