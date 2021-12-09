@@ -1,4 +1,4 @@
-# ESP32-CLI-eeprom
+# ESP32_CLI_eeprom
 
 [![GitHub stars](https://img.shields.io/github/stars/dominikn/ESP32-CLI-eeprom?style=social)](https://github.com/DominikN/ESP32-CLI-eeprom/stargazers/)
 
